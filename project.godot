@@ -32,6 +32,10 @@ folder_colors={
 "res://scripts/": "red"
 }
 
+[global_group]
+
+Jogador=""
+
 [input]
 
 esq={

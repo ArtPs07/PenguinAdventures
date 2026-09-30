@@ -18,7 +18,7 @@ const JUMP_VELOCITY = -300.0
 var contadorPulos = 0
 @export var maxPulos = 2
 @export var accel = 400
-@export var decel = 400
+@export var decel = 600
 @export var deslizar_decel = 100
 var direction = 0
 var estado: estadosJogador

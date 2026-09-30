@@ -156,7 +156,7 @@ animations = [{
 radius = 6.0
 height = 16.0
 
-[node name="Jogador" type="CharacterBody2D" unique_id=522947055]
+[node name="Jogador" type="CharacterBody2D" unique_id=522947055 groups=["Jogador"]]
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("1_yv1tq")
@@ -169,10 +169,3 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698701057]
 shape = SubResource("CapsuleShape2D_ys7n0")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1672577382]
-limit_left = 0
-limit_top = 0
-limit_right = 680
-limit_bottom = 200
-position_smoothing_enabled = true
