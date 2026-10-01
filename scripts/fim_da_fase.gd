@@ -1,10 +1,11 @@
 extends Area2D
 
-@export var prox_nv = ""
+@export var proxNv = ""
 
 func _on_body_entered(_body: Node2D) -> void:
-	call_deferred("carrega_prox_fase")
+	call_deferred("load_next_scene")
 	
-
-func carrega_prox_fase():
-	get_tree().change_scene_to_file("res://Cena/" + prox_nv +  ".tscn")
+func load_next_scene():
+	get_tree().change_scene_to_file("res://cena/" + proxNv + ".tscn")
+	
+	
