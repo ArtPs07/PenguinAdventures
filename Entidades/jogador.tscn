@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://7mfjqsjtd72r"]
 
 [ext_resource type="Script" uid="uid://d03eqe4bhhb4e" path="res://scripts/Jogador.gd" id="1_yv1tq"]
-[ext_resource type="Texture2D" uid="uid://ckab5gbic7vp6" path="res://Assets/1 - Penguin/Idle (16 x 16).png" id="2_qbtmm"]
-[ext_resource type="Texture2D" uid="uid://4li7acwj2xa" path="res://Assets/1 - Penguin/Waddling (16 x 16).png" id="3_1t3xe"]
-[ext_resource type="Texture2D" uid="uid://c3pqpj1rsc4u7" path="res://Assets/1 - Penguin/Ducking (16 x 16).png" id="3_ys7n0"]
-[ext_resource type="Texture2D" uid="uid://35scf40jf76w" path="res://Assets/1 - Penguin/Jump (16 x 16).png" id="4_ij8ri"]
-[ext_resource type="Texture2D" uid="uid://dedsnc54kuouv" path="res://Assets/1 - Penguin/Falling (16 x 16).png" id="5_7cj8u"]
-[ext_resource type="Texture2D" uid="uid://c8hvqmee1leh5" path="res://Assets/1 - Penguin/Belly_Sliding (16 x 16).png" id="6_ngd8o"]
+[ext_resource type="Texture2D" uid="uid://ckab5gbic7vp6" path="res://Sprites/1 - Penguin/Idle (16 x 16).png" id="2_qbtmm"]
+[ext_resource type="Texture2D" uid="uid://4li7acwj2xa" path="res://Sprites/1 - Penguin/Waddling (16 x 16).png" id="3_1t3xe"]
+[ext_resource type="Texture2D" uid="uid://c3pqpj1rsc4u7" path="res://Sprites/1 - Penguin/Ducking (16 x 16).png" id="3_ys7n0"]
+[ext_resource type="Texture2D" uid="uid://35scf40jf76w" path="res://Sprites/1 - Penguin/Jump (16 x 16).png" id="4_ij8ri"]
+[ext_resource type="Texture2D" uid="uid://dedsnc54kuouv" path="res://Sprites/1 - Penguin/Falling (16 x 16).png" id="5_7cj8u"]
+[ext_resource type="Texture2D" uid="uid://c8hvqmee1leh5" path="res://Sprites/1 - Penguin/Belly_Sliding (16 x 16).png" id="6_ngd8o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1t3xe"]
 atlas = ExtResource("2_qbtmm")

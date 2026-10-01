@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" format=3 uid="uid://npox58cimcgt"]
 
-[ext_resource type="Texture2D" uid="uid://c7sisi7pk30u0" path="res://Assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_rjb3j"]
-[ext_resource type="Texture2D" uid="uid://cf1ydvrhaa1vc" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="2_074f6"]
-[ext_resource type="Texture2D" uid="uid://b8ss567cf5f0m" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="3_tug8i"]
+[ext_resource type="Texture2D" uid="uid://c7sisi7pk30u0" path="res://Sprites/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_rjb3j"]
+[ext_resource type="Texture2D" uid="uid://cf1ydvrhaa1vc" path="res://Sprites/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="2_074f6"]
+[ext_resource type="Texture2D" uid="uid://b8ss567cf5f0m" path="res://Sprites/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="3_tug8i"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_s2p62"]
 tile_data = PackedInt32Array(0, 393216, 3, 65536, 262144, 4, 131072, 262144, 4, 196608, 262144, 4, 1, 393216, 3, 65537, 262144, 4, 131073, 262144, 4, 196609, 262144, 4, 2, 393216, 3, 65538, 262144, 4, 131074, 262144, 4, 196610, 262144, 4, 3, 131072, 3, 65539, 196608, 4, 131075, 196608, 4, 196611, 196608, 4, 4, 131072, 3, 65540, 262144, 4, 131076, 262144, 4, 196612, 262144, 4, 5, 131072, 3, 65541, 262144, 4, 131077, 262144, 4, 196613, 262144, 4, 6, 131072, 3, 65542, 262144, 4, 131078, 262144, 4, 196614, 262144, 4, 7, 131072, 3, 65543, 262144, 4, 131079, 262144, 4, 196615, 262144, 4, 8, 131072, 3, 65544, 262144, 4, 131080, 262144, 4, 196616, 262144, 4, 9, 131072, 3, 65545, 262144, 4, 131081, 262144, 4, 196617, 262144, 4, 10, 131072, 3, 65546, 262144, 4, 131082, 262144, 4, 196618, 262144, 4, 11, 131072, 3, 65547, 262144, 4, 131083, 262144, 4, 196619, 262144, 4, 12, 131072, 3, 65548, 262144, 4, 131084, 262144, 4, 196620, 262144, 4, 13, 131072, 3, 65549, 262144, 4, 131085, 262144, 4, 196621, 262144, 4)
