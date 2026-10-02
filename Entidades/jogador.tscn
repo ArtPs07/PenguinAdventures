@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://35scf40jf76w" path="res://Sprites/1 - Penguin/Jump (16 x 16).png" id="4_ij8ri"]
 [ext_resource type="Texture2D" uid="uid://dedsnc54kuouv" path="res://Sprites/1 - Penguin/Falling (16 x 16).png" id="5_7cj8u"]
 [ext_resource type="Texture2D" uid="uid://c8hvqmee1leh5" path="res://Sprites/1 - Penguin/Belly_Sliding (16 x 16).png" id="6_ngd8o"]
+[ext_resource type="Texture2D" uid="uid://bd3br7fo7uu81" path="res://Sprites/1 - Penguin/Hurt (16 x 16).png" id="7_26dl7"]
+[ext_resource type="Texture2D" uid="uid://bagmea3tbxdm" path="res://Sprites/1 - Penguin/Lying_On_Ground (16 x 16).png" id="8_imlql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1t3xe"]
 atlas = ExtResource("2_qbtmm")
@@ -145,6 +147,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("7_26dl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_imlql")
+}],
+"loop": 0,
+"name": &"morrer",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_4ig1b")
 }],
 "loop": 1,
@@ -156,6 +169,9 @@ animations = [{
 radius = 6.0
 height = 16.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxfmk"]
+size = Vector2(13, 16)
+
 [node name="Jogador" type="CharacterBody2D" unique_id=522947055 groups=["Jogador"]]
 collision_layer = 2
 collision_mask = 9
@@ -164,8 +180,18 @@ script = ExtResource("1_yv1tq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1814962677]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_pxfmk")
-animation = &"deslizar"
+animation = &"morrer"
+frame_progress = 0.7089111
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698701057]
 shape = SubResource("CapsuleShape2D_ys7n0")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=800598381]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1954226527]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_pxfmk")
+debug_color = Color(0.7527844, 0.45740998, 0.054822102, 0.41960785)
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

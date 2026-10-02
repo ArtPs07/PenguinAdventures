@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dermkl5v6k0mk"]
+
+[ext_resource type="Texture2D" uid="uid://1ri6shdfqphd" path="res://Sprites/Sprite Pack 6/3 - Skeleton/Standing (32 x 32).png" id="1_5t1ub"]
+[ext_resource type="Script" uid="uid://be6ahg4tga5yb" path="res://scripts/puro_osso.gd" id="1_uy4u1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pxfmk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5t1ub")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pxfmk"]
+radius = 8.0
+height = 26.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxfmk"]
+size = Vector2(16, 26)
+
+[node name="PuroOsso" type="CharacterBody2D" unique_id=77015984]
+collision_layer = 4
+script = ExtResource("1_uy4u1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1718649179]
+sprite_frames = SubResource("SpriteFrames_pxfmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1964891551]
+position = Vector2(2, 3)
+shape = SubResource("CapsuleShape2D_pxfmk")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1392352124]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1814775152]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_pxfmk")
+debug_color = Color(0.95399576, 0.095457844, 0.48769367, 0.41960785)

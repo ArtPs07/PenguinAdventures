@@ -10,6 +10,7 @@
 [ext_resource type="TileSet" uid="uid://c84chpoc0b1e4" path="res://Cena/Tiles/Decoração.tres" id="8_od1j3"]
 [ext_resource type="PackedScene" uid="uid://85lsxk4omo8i" path="res://Entidades/camera_2d.tscn" id="9_e532e"]
 [ext_resource type="PackedScene" uid="uid://daq6ptr4hckp7" path="res://Entidades/fim_da_fase.tscn" id="10_2026w"]
+[ext_resource type="PackedScene" uid="uid://dermkl5v6k0mk" path="res://Entidades/puro_osso.tscn" id="11_6qbjf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4ush"]
 size = Vector2(106, 773)
@@ -100,5 +101,8 @@ proxNv = "floresta"
 [node name="CollisionShape2D" parent="FimDaFase" index="0" unique_id=264685960]
 position = Vector2(2820, -412)
 shape = SubResource("RectangleShape2D_g4ush")
+
+[node name="PuroOsso" parent="." unique_id=77015984 instance=ExtResource("11_6qbjf")]
+position = Vector2(291, 126)
 
 [editable path="FimDaFase"]
