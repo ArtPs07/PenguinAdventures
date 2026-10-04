@@ -214,7 +214,8 @@ func aumentaColisor():
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if velocity.y > 0:
-		area.get_parent().queue_free()
+		
+		area.get_parent().toumouDano()
 		vai_para_Pular()
 	else:
 		vai_para_morrer()
