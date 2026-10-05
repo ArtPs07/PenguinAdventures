@@ -6,10 +6,14 @@ enum estados {
 }
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $Hitbox
+@onready var bateu_muro: RayCast2D = $bateuMuro
+@onready var vo_cair: RayCast2D = $voCair
 
 
-const SPEED = 300.0
+
+const SPEED = 30.0
 const JUMP_VELOCITY = -400.0
+var direction = 1
 
 func _ready() -> void:
 	vai_para_andar()
@@ -38,10 +42,17 @@ func vai_para_morrer():
 	hitbox.process_mode = Node.PROCESS_MODE_DISABLED
 
 func andandoEstado(_delta):
-	pass
+	velocity.x = SPEED * direction
+	if bateu_muro.is_colliding():
+		scale.x *= -1
+		direction *= -1
+	
+	if not vo_cair.is_colliding():
+		scale.x *= -1
+		direction *= -1
 
 func morrendoEstado(_delta):
-	pass
+	velocity.x = 0
 
 func toumouDano():
 	vai_para_morrer()

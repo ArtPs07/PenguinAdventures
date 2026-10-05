@@ -103,6 +103,9 @@ position = Vector2(2820, -412)
 shape = SubResource("RectangleShape2D_g4ush")
 
 [node name="PuroOsso" parent="." unique_id=77015984 instance=ExtResource("11_6qbjf")]
-position = Vector2(291, 126)
+position = Vector2(288, 174)
+
+[node name="PuroOsso2" parent="." unique_id=881469988 instance=ExtResource("11_6qbjf")]
+position = Vector2(343, 126)
 
 [editable path="FimDaFase"]
