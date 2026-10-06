@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b2qwt0njmpxx0"]
+
+[ext_resource type="Script" uid="uid://glrs06idwo64" path="res://scripts/quit.gd" id="1_g07bd"]
+
+[node name="FimDoJogo" type="Node2D" unique_id=2020278034]
+
+[node name="Control" type="Control" parent="." unique_id=828591314]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Quit" type="Button" parent="Control" unique_id=1121466066]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 86.0
+offset_right = 191.0
+offset_bottom = 117.0
+text = "QUIT
+
+"
+script = ExtResource("1_g07bd")

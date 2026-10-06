@@ -7,7 +7,8 @@ enum estadosJogador {
 	pulando,
 	agachando,
 	caindo,
-	deslizando
+	deslizando,
+	morrendo
 }
 
 @onready var colisao: CollisionShape2D = $CollisionShape2D
@@ -18,7 +19,7 @@ const JUMP_VELOCITY = -300.0
 var contadorPulos = 0
 @export var maxPulos = 2
 @export var accel = 400
-@export var decel = 400
+@export var decel = 600
 @export var deslizar_decel = 100
 var direction = 0
 var estado: estadosJogador
@@ -46,6 +47,8 @@ func _physics_process(delta: float) -> void:
 			caindo_estado(delta)
 		estadosJogador.deslizando:
 			deslizando_estado(delta)
+		estadosJogador.morrendo:
+			morrendo_estado(delta)
 			
 	move_and_slide()
 	
@@ -83,6 +86,11 @@ func vai_para_deslizar():
 	
 func parar_deslizar():
 	aumentaColisor()
+	
+func vai_para_morrer():
+	estado = estadosJogador.morrendo
+	anim.play("morrer")
+	velocity = Vector2.ZERO
 
 func idle_estado(delta):
 	move(delta)
@@ -165,6 +173,8 @@ func deslizando_estado(delta):
 		vai_para_Agachar()
 		return
 		
+func morrendo_estado(_delta):
+	pass
 		
 func atualiza_dir():
 	direction  = Input.get_axis("esq", "dir")
@@ -200,3 +210,22 @@ func aumentaColisor():
 	colisao.position.y = 0
 	
 	
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if velocity.y > 0:
+		
+		area.get_parent().toumouDano()
+		vai_para_Pular()
+	else:
+		vai_para_morrer()
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

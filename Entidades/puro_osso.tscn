@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://dermkl5v6k0mk"]
+
+[ext_resource type="Script" uid="uid://be6ahg4tga5yb" path="res://scripts/puro_osso.gd" id="1_xycu6"]
+[ext_resource type="Texture2D" uid="uid://ck2p6rb3u1gt6" path="res://assets/Sprite Pack 6/3 - Skeleton/Limping_Movement (32 x 32).png" id="2_0t87m"]
+[ext_resource type="Texture2D" uid="uid://bamnk7rr24762" path="res://assets/Sprite Pack 6/3 - Skeleton/Crumbling_Into_Bone_Pile (32 x 32).png" id="3_kg7vj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeh0p"]
+atlas = ExtResource("2_0t87m")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kydc3"]
+atlas = ExtResource("2_0t87m")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m040p"]
+atlas = ExtResource("2_0t87m")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41qld"]
+atlas = ExtResource("2_0t87m")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otn0v"]
+atlas = ExtResource("2_0t87m")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8cde"]
+atlas = ExtResource("2_0t87m")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h68bd"]
+atlas = ExtResource("3_kg7vj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bj8go"]
+atlas = ExtResource("3_kg7vj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5084"]
+atlas = ExtResource("3_kg7vj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3wap"]
+atlas = ExtResource("3_kg7vj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tvtr"]
+atlas = ExtResource("3_kg7vj")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2cq0"]
+atlas = ExtResource("3_kg7vj")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkm6j"]
+atlas = ExtResource("3_kg7vj")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pxfmk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oeh0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kydc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m040p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41qld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otn0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8cde")
+}],
+"loop": 1,
+"name": &"andando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h68bd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bj8go")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5084")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3wap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tvtr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2cq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkm6j")
+}],
+"loop": 0,
+"name": &"morrendo",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pxfmk"]
+radius = 8.0
+height = 26.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxfmk"]
+size = Vector2(16, 26)
+
+[node name="PuroOsso" type="CharacterBody2D" unique_id=77015984]
+collision_layer = 4
+script = ExtResource("1_xycu6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1718649179]
+sprite_frames = SubResource("SpriteFrames_pxfmk")
+animation = &"morrendo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1964891551]
+position = Vector2(2, 3)
+shape = SubResource("CapsuleShape2D_pxfmk")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1392352124]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1814775152]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_pxfmk")
+debug_color = Color(0.95399576, 0.095457844, 0.48769367, 0.41960785)
+
+[node name="bateuMuro" type="RayCast2D" parent="." unique_id=101872264]
+position = Vector2(0, 15)
+target_position = Vector2(22, 0)
+
+[node name="voCair" type="RayCast2D" parent="." unique_id=2095706683]
+position = Vector2(12, 1)
+target_position = Vector2(0, 18)
