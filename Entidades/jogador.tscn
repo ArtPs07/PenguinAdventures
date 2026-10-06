@@ -1,73 +1,73 @@
 [gd_scene format=3 uid="uid://7mfjqsjtd72r"]
 
-[ext_resource type="Script" uid="uid://d03eqe4bhhb4e" path="res://scripts/Jogador.gd" id="1_yv1tq"]
-[ext_resource type="Texture2D" uid="uid://ckab5gbic7vp6" path="res://Sprites/1 - Penguin/Idle (16 x 16).png" id="2_qbtmm"]
-[ext_resource type="Texture2D" uid="uid://4li7acwj2xa" path="res://Sprites/1 - Penguin/Waddling (16 x 16).png" id="3_1t3xe"]
-[ext_resource type="Texture2D" uid="uid://c3pqpj1rsc4u7" path="res://Sprites/1 - Penguin/Ducking (16 x 16).png" id="3_ys7n0"]
-[ext_resource type="Texture2D" uid="uid://35scf40jf76w" path="res://Sprites/1 - Penguin/Jump (16 x 16).png" id="4_ij8ri"]
-[ext_resource type="Texture2D" uid="uid://dedsnc54kuouv" path="res://Sprites/1 - Penguin/Falling (16 x 16).png" id="5_7cj8u"]
-[ext_resource type="Texture2D" uid="uid://c8hvqmee1leh5" path="res://Sprites/1 - Penguin/Belly_Sliding (16 x 16).png" id="6_ngd8o"]
-[ext_resource type="Texture2D" uid="uid://bd3br7fo7uu81" path="res://Sprites/1 - Penguin/Hurt (16 x 16).png" id="7_26dl7"]
-[ext_resource type="Texture2D" uid="uid://bagmea3tbxdm" path="res://Sprites/1 - Penguin/Lying_On_Ground (16 x 16).png" id="8_imlql"]
+[ext_resource type="Script" uid="uid://d03eqe4bhhb4e" path="res://scripts/Jogador.gd" id="1_ydbq5"]
+[ext_resource type="Texture2D" uid="uid://ckab5gbic7vp6" path="res://assets/1 - Penguin/Idle (16 x 16).png" id="2_ghsf3"]
+[ext_resource type="Texture2D" uid="uid://c3pqpj1rsc4u7" path="res://assets/1 - Penguin/Ducking (16 x 16).png" id="3_kat7q"]
+[ext_resource type="Texture2D" uid="uid://4li7acwj2xa" path="res://assets/1 - Penguin/Waddling (16 x 16).png" id="4_vtopc"]
+[ext_resource type="Texture2D" uid="uid://dedsnc54kuouv" path="res://assets/1 - Penguin/Falling (16 x 16).png" id="5_dkosa"]
+[ext_resource type="Texture2D" uid="uid://c8hvqmee1leh5" path="res://assets/1 - Penguin/Belly_Sliding (16 x 16).png" id="6_ck7x6"]
+[ext_resource type="Texture2D" uid="uid://bd3br7fo7uu81" path="res://assets/1 - Penguin/Hurt (16 x 16).png" id="7_6fs8a"]
+[ext_resource type="Texture2D" uid="uid://bagmea3tbxdm" path="res://assets/1 - Penguin/Lying_On_Ground (16 x 16).png" id="8_14w74"]
+[ext_resource type="Texture2D" uid="uid://35scf40jf76w" path="res://assets/1 - Penguin/Jump (16 x 16).png" id="9_k3knd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1t3xe"]
-atlas = ExtResource("2_qbtmm")
+atlas = ExtResource("2_ghsf3")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ij8ri"]
-atlas = ExtResource("2_qbtmm")
+atlas = ExtResource("2_ghsf3")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ys7n0"]
-atlas = ExtResource("2_qbtmm")
+atlas = ExtResource("2_ghsf3")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7cj8u"]
-atlas = ExtResource("2_qbtmm")
+atlas = ExtResource("2_ghsf3")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ngd8o"]
-atlas = ExtResource("2_qbtmm")
+atlas = ExtResource("2_ghsf3")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_38jbe"]
-atlas = ExtResource("3_1t3xe")
+atlas = ExtResource("4_vtopc")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_26dl7"]
-atlas = ExtResource("3_1t3xe")
+atlas = ExtResource("4_vtopc")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_imlql"]
-atlas = ExtResource("3_1t3xe")
+atlas = ExtResource("4_vtopc")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f8beu"]
-atlas = ExtResource("3_1t3xe")
+atlas = ExtResource("4_vtopc")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8yrsa"]
-atlas = ExtResource("3_1t3xe")
+atlas = ExtResource("4_vtopc")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5avc0"]
-atlas = ExtResource("3_1t3xe")
+atlas = ExtResource("4_vtopc")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gdhex"]
-atlas = ExtResource("6_ngd8o")
+atlas = ExtResource("6_ck7x6")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lfqv7"]
-atlas = ExtResource("6_ngd8o")
+atlas = ExtResource("6_ck7x6")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m63b5"]
-atlas = ExtResource("6_ngd8o")
+atlas = ExtResource("6_ck7x6")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ig1b"]
-atlas = ExtResource("4_ij8ri")
+atlas = ExtResource("9_k3knd")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pxfmk"]
@@ -94,7 +94,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_ys7n0")
+"texture": ExtResource("3_kat7q")
 }],
 "loop": 2,
 "name": &"agachar",
@@ -125,7 +125,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_7cj8u")
+"texture": ExtResource("5_dkosa")
 }],
 "loop": 2,
 "name": &"cair",
@@ -147,10 +147,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_26dl7")
+"texture": ExtResource("7_6fs8a")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_imlql")
+"texture": ExtResource("8_14w74")
 }],
 "loop": 0,
 "name": &"morrer",
@@ -175,7 +175,7 @@ size = Vector2(13, 16)
 [node name="Jogador" type="CharacterBody2D" unique_id=522947055 groups=["Jogador"]]
 collision_layer = 2
 collision_mask = 9
-script = ExtResource("1_yv1tq")
+script = ExtResource("1_ydbq5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1814962677]
 z_index = 1

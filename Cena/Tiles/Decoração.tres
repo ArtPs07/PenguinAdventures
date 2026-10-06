@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" format=3 uid="uid://c84chpoc0b1e4"]
 
-[ext_resource type="Texture2D" uid="uid://bd8kvfqk64fh7" path="res://Sprites/Seasonal Tilesets/1 - Grassland/Extra_plants (16 x 16).png" id="1_1kqe3"]
-[ext_resource type="Texture2D" uid="uid://br56cd6xfelpb" path="res://Sprites/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_psdjv"]
-[ext_resource type="Texture2D" uid="uid://bwph1o5crxk8l" path="res://Sprites/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="3_l3jt5"]
-[ext_resource type="Texture2D" uid="uid://bgwawi1qraql0" path="res://Sprites/Seasonal Tilesets/4 - Winter World/Winter_entities (16 x 16).png" id="4_mqnt8"]
-[ext_resource type="Texture2D" uid="uid://bikn38gcnbsrg" path="res://Sprites/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="5_bha3y"]
-[ext_resource type="Texture2D" uid="uid://o5kw26eihq3r" path="res://Sprites/Seasonal Tilesets/5 - Misc. universal tiles/House (112 x 96).png" id="6_psdjv"]
-[ext_resource type="Texture2D" uid="uid://dnkg87m2pconm" path="res://Sprites/Seasonal Tilesets/5 - Misc. universal tiles/Flowers (16 x 16).png" id="7_l3jt5"]
+[ext_resource type="Texture2D" uid="uid://bd8kvfqk64fh7" path="res://assets/Seasonal Tilesets/1 - Grassland/Extra_plants (16 x 16).png" id="1_1kqe3"]
+[ext_resource type="Texture2D" uid="uid://br56cd6xfelpb" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_psdjv"]
+[ext_resource type="Texture2D" uid="uid://bwph1o5crxk8l" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="3_l3jt5"]
+[ext_resource type="Texture2D" uid="uid://bgwawi1qraql0" path="res://assets/Seasonal Tilesets/4 - Winter World/Winter_entities (16 x 16).png" id="4_mqnt8"]
+[ext_resource type="Texture2D" uid="uid://bikn38gcnbsrg" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="5_bha3y"]
+[ext_resource type="Texture2D" uid="uid://o5kw26eihq3r" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/House (112 x 96).png" id="6_psdjv"]
+[ext_resource type="Texture2D" uid="uid://dnkg87m2pconm" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Flowers (16 x 16).png" id="7_l3jt5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mqnt8"]
 texture = ExtResource("1_1kqe3")

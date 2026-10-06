@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="KdMinhaBarbieJogo"
+config/name="PenguinAdventures"
 run/main_scene="uid://bwuf4p2de2107"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
@@ -26,9 +26,9 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
-"res://Cena/": "green",
-"res://Entidades/": "purple",
-"res://Sprites/": "yellow",
+"res://assets/": "yellow",
+"res://cena/": "green",
+"res://entidades/": "purple",
 "res://scripts/": "red"
 }
 
