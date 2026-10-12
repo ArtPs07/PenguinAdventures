@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bjwaxvvdvcmbj"]
+
+[ext_resource type="Texture2D" uid="uid://nn1wr6x3v53i" path="res://assets/Sprite Pack 4/1 - Agent_Mike_Bullet (16 x 16).png" id="1_1o70c"]
+[ext_resource type="Script" uid="uid://0ayoyhxyj2va" path="res://scripts/bullet.gd" id="1_mgjqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxfmk"]
+size = Vector2(7, 6)
+
+[node name="bullet" type="Area2D" unique_id=1294640183]
+script = ExtResource("1_mgjqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=952020272]
+light_mask = 16
+visibility_layer = 4
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_pxfmk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1842895397]
+texture = ExtResource("1_1o70c")

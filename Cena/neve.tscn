@@ -1,13 +1,14 @@
 [gd_scene format=4 uid="uid://c0n0axk0md3d"]
 
-[ext_resource type="Texture2D" uid="uid://cnhjyd4yjvf83" path="res://assets/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="1_pbavc"]
-[ext_resource type="Texture2D" uid="uid://0fjpd778qakk" path="res://assets/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="2_1thqe"]
-[ext_resource type="Texture2D" uid="uid://dj6u85405xpkq" path="res://assets/Seasonal Tilesets/4 - Winter World/Background parts/1 - Snowy_foreground_area.png" id="3_1ckp6"]
+[ext_resource type="Texture2D" uid="uid://2akg4qr2ak7m" path="res://assets/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="1_pbavc"]
+[ext_resource type="Texture2D" uid="uid://cfm47g7fymuui" path="res://assets/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="2_1thqe"]
+[ext_resource type="Texture2D" uid="uid://dc4asdve1u2fe" path="res://assets/Seasonal Tilesets/4 - Winter World/Background parts/1 - Snowy_foreground_area.png" id="3_1ckp6"]
 [ext_resource type="TileSet" uid="uid://npox58cimcgt" path="res://cena/tiles/TerrenoGrama.tres" id="4_jouys"]
 [ext_resource type="PackedScene" uid="uid://85lsxk4omo8i" path="res://entidades/camera_2d.tscn" id="5_ekn2b"]
 [ext_resource type="PackedScene" uid="uid://7mfjqsjtd72r" path="res://entidades/jogador.tscn" id="6_8l507"]
 [ext_resource type="TileSet" uid="uid://c84chpoc0b1e4" path="res://cena/tiles/Decoração.tres" id="7_1ckp6"]
 [ext_resource type="PackedScene" uid="uid://daq6ptr4hckp7" path="res://entidades/fim_da_fase.tscn" id="8_jouys"]
+[ext_resource type="PackedScene" uid="uid://dermkl5v6k0mk" path="res://entidades/puro_osso.tscn" id="9_km8uo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jouys"]
 size = Vector2(107, 469.5)
@@ -48,7 +49,7 @@ region_rect = Rect2(0, 0, 864, 208)
 limit_right = 3400
 
 [node name="Jogador" parent="." unique_id=522947055 instance=ExtResource("6_8l507")]
-position = Vector2(96, 80)
+position = Vector2(112, 185)
 
 [node name="Tiles" type="Node2D" parent="." unique_id=673215688]
 position = Vector2(-817, 9)
@@ -68,5 +69,8 @@ proxNv = "fim_do_jogo"
 [node name="CollisionShape2D" parent="FimDaFase" index="0" unique_id=264685960]
 position = Vector2(3406, 59)
 shape = SubResource("RectangleShape2D_jouys")
+
+[node name="PuroOsso" parent="." unique_id=77015984 instance=ExtResource("9_km8uo")]
+position = Vector2(436, 150)
 
 [editable path="FimDaFase"]

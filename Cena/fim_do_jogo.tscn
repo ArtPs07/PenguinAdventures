@@ -20,3 +20,5 @@ text = "QUIT
 
 "
 script = ExtResource("1_g07bd")
+
+[connection signal="pressed" from="Control/Quit" to="Control/Quit" method="_on_pressed"]

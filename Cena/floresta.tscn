@@ -2,23 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://7mfjqsjtd72r" path="res://entidades/jogador.tscn" id="1_wi6se"]
 [ext_resource type="TileSet" uid="uid://npox58cimcgt" path="res://cena/tiles/TerrenoGrama.tres" id="2_7fdej"]
-[ext_resource type="Texture2D" uid="uid://d22b44jsmk7rq" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="3_f5xhd"]
-[ext_resource type="Texture2D" uid="uid://b6swq8cwbdvgo" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="3_hb4pg"]
+[ext_resource type="Texture2D" uid="uid://bgwufypxuji6d" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="3_f5xhd"]
+[ext_resource type="Texture2D" uid="uid://ca8mbg138cbmn" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="3_hb4pg"]
 [ext_resource type="PackedScene" uid="uid://daq6ptr4hckp7" path="res://entidades/fim_da_fase.tscn" id="5_hb4pg"]
-[ext_resource type="Texture2D" uid="uid://dx13typupl7dn" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/5 - Tree_row_BG_2.png" id="5_ssyse"]
-[ext_resource type="Texture2D" uid="uid://jk14vi4011ye" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="7_jk0oj"]
-[ext_resource type="Texture2D" uid="uid://clw7ssvbqpbdx" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="8_pl3oy"]
-[ext_resource type="Texture2D" uid="uid://dpm22s2xrj6ce" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="9_5vnok"]
+[ext_resource type="Texture2D" uid="uid://gyc03ap8egrg" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/5 - Tree_row_BG_2.png" id="5_ssyse"]
+[ext_resource type="Texture2D" uid="uid://coj6rf4v68pai" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="7_jk0oj"]
+[ext_resource type="Texture2D" uid="uid://brxlydl4i7ctk" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="8_pl3oy"]
+[ext_resource type="Texture2D" uid="uid://biywawtrbnhgg" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="9_5vnok"]
 [ext_resource type="PackedScene" uid="uid://85lsxk4omo8i" path="res://entidades/camera_2d.tscn" id="10_uwxbu"]
 [ext_resource type="TileSet" uid="uid://c84chpoc0b1e4" path="res://cena/tiles/Decoração.tres" id="11_jk0oj"]
+[ext_resource type="PackedScene" uid="uid://dermkl5v6k0mk" path="res://entidades/puro_osso.tscn" id="12_gphd2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mf8vu"]
 size = Vector2(20, 226.5)
 
 [node name="Floresta" type="Node2D" unique_id=1787496752]
-
-[node name="Jogador" parent="." unique_id=522947055 instance=ExtResource("1_wi6se")]
-position = Vector2(96, 176)
 
 [node name="FimDaFase" parent="." unique_id=2064428115 instance=ExtResource("5_hb4pg")]
 position = Vector2(2677, 35)
@@ -27,6 +25,9 @@ proxNv = "neve"
 [node name="CollisionShape2D" parent="FimDaFase" index="0" unique_id=264685960]
 position = Vector2(715, 81.25)
 shape = SubResource("RectangleShape2D_mf8vu")
+
+[node name="Jogador" parent="." unique_id=522947055 instance=ExtResource("1_wi6se")]
+position = Vector2(109, 185)
 
 [node name="Camada6" type="Parallax2D" parent="." unique_id=712727520]
 scroll_scale = Vector2(0.1, 0.1)
@@ -114,5 +115,8 @@ tile_set = ExtResource("2_7fdej")
 [node name="Decorativos" type="TileMapLayer" parent="Tiles" unique_id=1342273092]
 tile_map_data = PackedByteArray("AAANAAsAAgABAAEAAAATAAsAAgABAAEAAAAkAAwAAgABAAUAAADSAAwAAQADAAUAAAAlAAcAAgADAAUAAAAmAAcAAgADAAUAAAAmAAwAAgADAAUAAAAqAAwAAgADAAUAAAAyAAwAAgADAAUAAAAoAAYAAgABAAEAAAA2AAoAAgABAAEAAAA8AAsAAgABAAUAAAA+AAsAAgABAAUAAABEAAsAAgABAAUAAABPAAgAAgAFAAEAAABiAAkAAgAFAAEAAABKAAkAAgABAAUAAABYAAgAAgABAAEAAABSAAkAAgADAAUAAABUAAkAAgADAAUAAABbAAoAAgAJAAEAAABgAAoAAgALAAEAAABcAAoAAgAKAAEAAABdAAoAAgAKAAEAAABeAAoAAgAKAAEAAABfAAoAAgAKAAEAAACAAAgAAgABAAUAAACBAAgAAgABAAUAAACSAAgAAgABAAUAAACLAAMAAgABAAUAAACKAAwAAgADAAUAAABzAAwAAgADAAUAAABqAAsAAgADAAUAAACKAAcAAgAFAAEAAAB7AAsAAgABAAEAAACgAAkAAgABAAEAAACnAAkAAgADAAUAAACrAAgAAgADAAUAAACyAAsAAgAFAAEAAAC7AAsAAgAPAAEAAAC8AAsAAgAQAAEAAAC9AAsAAgARAAEAAADCAAsAAgAPAAEAAADDAAsAAgAQAAEAAADEAAsAAgARAAEAAAC/AAoAAgABAAEAAAA=")
 tile_set = ExtResource("11_jk0oj")
+
+[node name="PuroOsso" parent="." unique_id=77015984 instance=ExtResource("12_gphd2")]
+position = Vector2(540, 144)
 
 [editable path="FimDaFase"]

@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://7mfjqsjtd72r"]
 
 [ext_resource type="Script" uid="uid://d03eqe4bhhb4e" path="res://scripts/Jogador.gd" id="1_ydbq5"]
-[ext_resource type="Texture2D" uid="uid://ckab5gbic7vp6" path="res://assets/1 - Penguin/Idle (16 x 16).png" id="2_ghsf3"]
-[ext_resource type="Texture2D" uid="uid://c3pqpj1rsc4u7" path="res://assets/1 - Penguin/Ducking (16 x 16).png" id="3_kat7q"]
-[ext_resource type="Texture2D" uid="uid://4li7acwj2xa" path="res://assets/1 - Penguin/Waddling (16 x 16).png" id="4_vtopc"]
-[ext_resource type="Texture2D" uid="uid://dedsnc54kuouv" path="res://assets/1 - Penguin/Falling (16 x 16).png" id="5_dkosa"]
-[ext_resource type="Texture2D" uid="uid://c8hvqmee1leh5" path="res://assets/1 - Penguin/Belly_Sliding (16 x 16).png" id="6_ck7x6"]
-[ext_resource type="Texture2D" uid="uid://bd3br7fo7uu81" path="res://assets/1 - Penguin/Hurt (16 x 16).png" id="7_6fs8a"]
-[ext_resource type="Texture2D" uid="uid://bagmea3tbxdm" path="res://assets/1 - Penguin/Lying_On_Ground (16 x 16).png" id="8_14w74"]
-[ext_resource type="Texture2D" uid="uid://35scf40jf76w" path="res://assets/1 - Penguin/Jump (16 x 16).png" id="9_k3knd"]
+[ext_resource type="Texture2D" uid="uid://dxqhj7fg5qhs1" path="res://assets/1 - Penguin/Idle (16 x 16).png" id="2_ghsf3"]
+[ext_resource type="Texture2D" uid="uid://d3sltlgmxxqgx" path="res://assets/1 - Penguin/Ducking (16 x 16).png" id="3_kat7q"]
+[ext_resource type="Texture2D" uid="uid://dgedrxp6xkcnq" path="res://assets/1 - Penguin/Waddling (16 x 16).png" id="4_vtopc"]
+[ext_resource type="Texture2D" uid="uid://hknu2qx087wn" path="res://assets/1 - Penguin/Falling (16 x 16).png" id="5_dkosa"]
+[ext_resource type="Texture2D" uid="uid://b1c18raq6lbh8" path="res://assets/1 - Penguin/Belly_Sliding (16 x 16).png" id="6_ck7x6"]
+[ext_resource type="Texture2D" uid="uid://bg8dwgwx8jyjl" path="res://assets/1 - Penguin/Hurt (16 x 16).png" id="7_6fs8a"]
+[ext_resource type="Texture2D" uid="uid://drg0x4m17yi0v" path="res://assets/1 - Penguin/Lying_On_Ground (16 x 16).png" id="8_14w74"]
+[ext_resource type="Texture2D" uid="uid://rp5iyydbe3cq" path="res://assets/1 - Penguin/Jump (16 x 16).png" id="9_k3knd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1t3xe"]
 atlas = ExtResource("2_ghsf3")
@@ -190,8 +190,14 @@ shape = SubResource("CapsuleShape2D_ys7n0")
 [node name="Hitbox" type="Area2D" parent="." unique_id=800598381]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1954226527]
+light_mask = 2
+visibility_layer = 4
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_pxfmk")
 debug_color = Color(0.7527844, 0.45740998, 0.054822102, 0.41960785)
 
+[node name="TempoReload" type="Timer" parent="." unique_id=491992006]
+one_shot = true
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="timeout" from="TempoReload" to="." method="_on_tempo_reload_timeout"]

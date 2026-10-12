@@ -8,13 +8,18 @@ enum estadosJogador {
 	agachando,
 	caindo,
 	deslizando,
-	morrendo
+	morrendo,
+	atacando
 }
+
+
+const BULLET = preload("res://entidades/bullet.tscn")
 
 @onready var colisao: CollisionShape2D = $CollisionShape2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var tempo_reload: Timer = $TempoReload
 
-@export var max_vel = 180.0
+@export var max_vel = 150.0
 const JUMP_VELOCITY = -300.0
 var contadorPulos = 0
 @export var maxPulos = 2
@@ -49,6 +54,8 @@ func _physics_process(delta: float) -> void:
 			deslizando_estado(delta)
 		estadosJogador.morrendo:
 			morrendo_estado(delta)
+		estadosJogador.atacando:
+			atacando_estado(delta)
 			
 	move_and_slide()
 	
@@ -91,6 +98,11 @@ func vai_para_morrer():
 	estado = estadosJogador.morrendo
 	anim.play("morrer")
 	velocity = Vector2.ZERO
+	tempo_reload.start()
+
+func vai_para_atacar():
+	estado = estadosJogador.atacando
+	atira()
 
 func idle_estado(delta):
 	move(delta)
@@ -104,6 +116,10 @@ func idle_estado(delta):
 		
 	if Input.is_action_pressed("agachar"):
 		vai_para_Agachar()
+		return
+		
+	if Input.is_action_just_pressed("habilidade especial"):
+		vai_para_atacar()
 		return
 		
 func andando_estado(delta):
@@ -136,6 +152,8 @@ func pulando_estado(delta):
 	if velocity.y > 0:
 		vai_para_cair()
 		return
+		
+	
 		
 func agachando_estado(_delta):
 	atualiza_dir()
@@ -176,6 +194,10 @@ func deslizando_estado(delta):
 func morrendo_estado(_delta):
 	pass
 		
+		
+func atacando_estado(_delta):
+	pass
+	
 func atualiza_dir():
 	direction  = Input.get_axis("esq", "dir")
 	
@@ -188,14 +210,16 @@ func podePular() -> bool:
 	return contadorPulos < maxPulos
 	
 	
-func move(delta):
+func move(_delta):
 	atualiza_dir()
 	
 	if direction: # direction é -1 com player andando para esquerda e 1 andando pra direita
-		velocity.x = move_toward(velocity.x, direction * max_vel, accel * delta)
-		
+		#velocity.x = move_toward(velocity.x, direction * max_vel, accel * delta)
+		velocity.x = direction * max_vel
 	else:
-		velocity.x = move_toward(velocity.x, 0, decel * delta)
+		velocity.x = 0
+		#velocity.x = move_toward(velocity.x, 0, decel * delta)
+		
 
 
 	
@@ -218,14 +242,20 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		area.get_parent().toumouDano()
 		vai_para_Pular()
 	else:
-		vai_para_morrer()
+		if estado != estadosJogador.morrendo:
+			vai_para_morrer()
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+func _on_tempo_reload_timeout() -> void:
+	get_tree().reload_current_scene()
+	
+func atira():
+	pass
+	
+	
+	
+	
+	
+	
+	
